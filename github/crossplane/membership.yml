@@ -1,0 +1,22 @@
+---
+apiVersion: organizations.github.crossplane.io/v1alpha1
+kind: Membership
+metadata:
+  name: first
+  namespace: crossplane-system
+spec:
+  forProvider:
+    user: Kidswiss
+    email: <email>
+    organization: vshn-hackday
+    role: admin
+  providerConfigRef:
+    name: default
+  # a reference to a Kubernetes secret to which the controller will write the runnersToken
+  writeConnectionSecretToRef:
+    name: github-member-first
+    namespace: crossplane-system
+
+
+
+
