@@ -1,0 +1,30 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: compositegituser.git.vshn.net
+spec:
+  group: git.vshn.net
+  names:
+    kind: CompositeGitUser
+    plural: compositegituser
+  claimNames:
+    kind: GitUser
+    plural: gitusers
+  versions:
+  - name: v1alpha1
+    served: true
+    referenceable: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              userInfo:
+                type: object
+                properties:
+                  userID:
+                    type: integer
+            required:
+              - userInfo

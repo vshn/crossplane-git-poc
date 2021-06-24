@@ -1,0 +1,9 @@
+apiVersion: git.vshn.net/v1alpha1
+kind: GitUser
+metadata:
+  name: example-group-member
+spec:
+  userInfo:
+    userID: 3
+  compositionRef:
+    name: compositegituser.git.vshn.net

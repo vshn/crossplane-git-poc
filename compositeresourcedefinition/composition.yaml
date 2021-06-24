@@ -1,0 +1,35 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: compositegituser.git.vshn.net
+spec:
+  compositeTypeRef:
+    apiVersion: git.vshn.net/v1alpha1
+    kind: CompositeGitUser
+  resources:
+    - name: exmple-group-member
+      base:
+        apiVersion: groups.gitlab.crossplane.io/v1alpha1
+        kind: GroupMember
+        spec:
+          forProvider:
+            groupID: 5
+            accessLevel: 40
+          providerConfigRef:
+            name: gitlab-provider
+      patches:
+        - fromFieldPath: "spec.userInfo.userID"
+          toFieldPath: "spec.forProvider.userID"
+    - name: ultragroup-group-member
+      base:
+        apiVersion: groups.gitlab.crossplane.io/v1alpha1
+        kind: GroupMember
+        spec:
+          forProvider:
+            groupID: 8
+            accessLevel: 40
+          providerConfigRef:
+            name: gitlab-provider
+      patches:
+        - fromFieldPath: "spec.userInfo.userID"
+          toFieldPath: "spec.forProvider.userID"
