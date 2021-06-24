@@ -24,7 +24,11 @@ spec:
               userInfo:
                 type: object
                 properties:
-                  userID:
+                  userID: # TODO rename to usergitlabid
                     type: integer
+                  githubUserName:
+                    type: string
+                  githubUserMail:
+                    type: string
             required:
               - userInfo

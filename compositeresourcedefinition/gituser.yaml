@@ -5,5 +5,7 @@ metadata:
 spec:
   userInfo:
     userID: 3
+    githubUserName: someuser
+    githubUserMail: some@mail.com
   compositionRef:
     name: compositegituser.git.vshn.net

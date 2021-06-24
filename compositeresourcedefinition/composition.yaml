@@ -33,3 +33,18 @@ spec:
       patches:
         - fromFieldPath: "spec.userInfo.userID"
           toFieldPath: "spec.forProvider.userID"
+    - name: vshnday-org-member-github
+      base:
+        apiVersion: organizations.github.crossplane.io/v1alpha1
+        kind: Membership
+        spec:
+          forProvider:
+            organization: vshn-hackday
+            role: admin
+          providerConfigRef:
+            name: default
+      patches:
+        - fromFieldPath: "spec.userInfo.githubUserName"
+          toFieldPath: "spec.forProvider.user"
+        - fromFieldPath: "spec.userInfo.githubUserMail"
+          toFieldPath: "spec.forProvider.email"

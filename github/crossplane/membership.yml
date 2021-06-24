@@ -6,7 +6,7 @@ metadata:
   namespace: crossplane-system
 spec:
   forProvider:
-    user: Kidswiss
+    user: glrf
     email: <email>
     organization: vshn-hackday
     role: admin
@@ -16,7 +16,3 @@ spec:
   writeConnectionSecretToRef:
     name: github-member-first
     namespace: crossplane-system
-
-
-
-
