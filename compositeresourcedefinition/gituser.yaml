@@ -4,7 +4,7 @@ metadata:
   name: example-group-member
 spec:
   userInfo:
-    userID: 3
+    userID: 4
     githubUserName: someuser
     githubUserMail: some@mail.com
   compositionRef:

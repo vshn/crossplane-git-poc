@@ -1,10 +1,10 @@
-# ---
-# apiVersion: pkg.crossplane.io/v1beta1
-# kind: Provider
-# metadata:
-#   name: provider-gitlab
-# spec:
-#   package: "kidswiss/provider-gitlab:latest"
+---
+apiVersion: pkg.crossplane.io/v1beta1
+kind: Provider
+metadata:
+  name: provider-gitlab
+spec:
+  package: "kidswiss/provider-gitlab:latest"
 
 ---
 
